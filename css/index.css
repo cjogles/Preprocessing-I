@@ -334,3 +334,17 @@ nav a:hover {
   font-size: 0.9rem;
   padding: 1% 0;
 }
+@media (max-width: 500px) {
+  header nav a {
+    margin: auto;
+  }
+  section.mainContent {
+    flex-direction: column;
+    width: 100%;
+  }
+  section.mainContent .sideBar .middleSection {
+    justify-content: center;
+    width: 100%;
+    margin: 30% 0;
+  }
+}

@@ -69,13 +69,6 @@ h3 {
 	}
 }
 
-// ****************** MEDIA QUERIES **************************
-.mobile() {
-	@media (max-width: 500px) {
-
-	}
-}
-
 // ****************** VARIABLES *******************************
 
 @header-font: 'Oswald', sans-serif;
@@ -271,14 +264,30 @@ nav {
 				} // CLOSING h4 tag
 
 			} // CLOSING .eduHead
-	
-
-
-
-
 
 		} // CLOSING .profile, .employmentHistory, .education classes
 
 	} // CLOSING middleSection class
 
 } // CLOSING .mainContent class
+
+@media (max-width: 500px) {
+
+	header nav a {
+
+		margin: auto;
+
+	} // CLOSING header nav a tag
+
+	section.mainContent {
+		flex-direction: column;
+		width: 100%;
+		.sideBar .middleSection {
+			justify-content: center;
+			width: 100%;
+			margin: 30% 0;
+		}
+	}
+
+
+}
