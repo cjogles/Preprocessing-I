@@ -215,12 +215,22 @@ nav a:hover {
 .mainContent .sidebar .skills ul {
   font-family: 'Hepta Slab', serif;
   padding: 10px 0;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  width: 95%;
+  margin-left: 20px;
 }
 .mainContent .sidebar .contactInfo ul li,
 .mainContent .sidebar .skills ul li {
-  list-style-position: inside;
+  list-style-position: outside;
   list-style-type: circle;
-  padding: 10px 0;
+  padding: 1% 0;
+  line-height: 1.3rem;
+}
+.mainContent .sidebar .contactInfo ul li,
+.mainContent .sidebar .skills ul li {
+  padding: 5% 0;
 }
 .mainContent .middleSection {
   border: 1px solid silver;
@@ -246,21 +256,27 @@ nav a:hover {
 .mainContent .middleSection .education ul {
   font-family: 'Hepta Slab', serif;
   padding: 10px 0;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  width: 95%;
+  margin-left: 20px;
 }
 .mainContent .middleSection .profile ul li,
 .mainContent .middleSection .employmentHistory ul li,
 .mainContent .middleSection .education ul li {
-  list-style-position: inside;
+  list-style-position: outside;
   list-style-type: circle;
-  padding: 10px 0;
+  padding: 1% 0;
+  line-height: 1.3rem;
 }
 .mainContent .middleSection .profile p,
 .mainContent .middleSection .employmentHistory p,
 .mainContent .middleSection .education p {
-  padding: 2% 3%;
+  padding: 2% 1.8%;
   padding-right: 10%;
   font-family: 'Hepta Slab', serif;
-  line-height: 1.3;
+  line-height: 1.4rem;
   font-size: 1rem;
 }
 .mainContent .middleSection .profile .empHistHead,
@@ -287,6 +303,11 @@ nav a:hover {
   font-family: 'Oswald', sans-serif;
   font-size: 0.9rem;
   padding: 1% 0;
+}
+.mainContent .middleSection .profile .empHistList ul,
+.mainContent .middleSection .employmentHistory .empHistList ul,
+.mainContent .middleSection .education .empHistList ul {
+  font-size: 1rem;
 }
 .mainContent .middleSection .profile .eduHead,
 .mainContent .middleSection .employmentHistory .eduHead,
