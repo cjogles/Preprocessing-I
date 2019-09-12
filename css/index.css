@@ -90,6 +90,9 @@ video {
   font: inherit;
   vertical-align: baseline;
 }
+* {
+  max-width: 100%;
+}
 @font-face {
   font-family: 'Hepta Slab';
   font-style: normal;
@@ -183,9 +186,12 @@ nav a:hover {
   font-family: 'Oswald', sans-serif;
   font-size: 1.5rem;
 }
-.nameTitle h1,
+.nameTitle h1 {
+  padding: 2% 0;
+}
 .nameTitle h2 {
   padding: 2% 0;
+  padding-left: 10px;
 }
 .mainContent {
   display: flex;
@@ -335,6 +341,17 @@ nav a:hover {
   padding: 1% 0;
 }
 @media (max-width: 500px) {
+  .nameTitle {
+    display: flex;
+    width: 100%;
+  }
+  .nameTitle h1 {
+    padding-left: 10px;
+  }
+  .nameTitle h2 {
+    padding-top: 10px;
+    padding-left: 10px;
+  }
   header nav a {
     margin: auto;
   }
@@ -342,9 +359,10 @@ nav a:hover {
     flex-direction: column;
     width: 100%;
   }
-  section.mainContent .sideBar .middleSection {
-    justify-content: center;
+  section.mainContent .sidebar {
     width: 100%;
-    margin: 30% 0;
+  }
+  section.mainContent .middleSection {
+    width: 100%;
   }
 }

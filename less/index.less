@@ -24,7 +24,9 @@ time, mark, audio, video {
 	font: inherit;
 	vertical-align: baseline;
 }
-
+* {
+	max-width: 100%;
+}
 // *************** FONTS ***********************
 
 @import url('https://fonts.googleapis.com/css?family=Hepta+Slab|Oswald&display=swap');
@@ -151,11 +153,16 @@ nav {
 	font-family: @header-font; 
 	font-size: 1.5rem;
 
-	h1, h2 {
+	h1 {
 
 		padding: 2% 0;
 
 	} // CLOSING H1 and H2
+
+	h2 {
+		padding: 2% 0;
+		padding-left: 10px;
+	}
 
 } // CLOSING .nameTitle
 
@@ -273,6 +280,17 @@ nav {
 
 @media (max-width: 500px) {
 
+	.nameTitle {
+		display: flex;
+		width: 100%;
+		h1 {
+			padding-left: 10px;
+		}
+		h2 {
+			padding-top: 10px;
+			padding-left: 10px;
+		}	
+	}
 	header nav a {
 
 		margin: auto;
@@ -280,14 +298,15 @@ nav {
 	} // CLOSING header nav a tag
 
 	section.mainContent {
+
 		flex-direction: column;
-		width: 100%;
-		.sideBar .middleSection {
-			justify-content: center;
+		width:100%;
+		.sidebar {
 			width: 100%;
-			margin: 30% 0;
+		}
+		.middleSection {
+			width: 100%;
 		}
 	}
-
 
 }
