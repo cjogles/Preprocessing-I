@@ -1,1 +1,368 @@
-/* Compile your LESS file! */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+* {
+  max-width: 100%;
+}
+@font-face {
+  font-family: 'Hepta Slab';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/heptaslab/v2/ea8JadoyU_jkHdalebHvyWVNdYoIsHe5HvkV5wfcaZQ.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/oswald/v24/TK3_WkUHHAIjg75cFRf3bXL8LICs1_FvsUZiYA.ttf) format('truetype');
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* Set every element's box-sizing to border-box */
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+}
+nav {
+  display: flex;
+  justify-content: center;
+  justify-content: space-evenly;
+  align-items: center;
+  justify-content: flex-end;
+  margin-right: 5%;
+  margin-bottom: 3%;
+}
+nav a:link,
+nav a:visited {
+  padding: 1% 2%;
+  font-family: 'Hepta Slab', serif;
+  text-decoration: none;
+  color: silver;
+}
+nav a:hover {
+  text-decoration: underline;
+}
+.nameTitle {
+  border: 1px solid silver;
+  outline-style: ridge;
+  display: flex;
+  justify-content: center;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+  width: 30%;
+  margin: auto;
+  margin-bottom: 3%;
+  padding-top: 3%;
+  padding-bottom: 3%;
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.5rem;
+}
+.nameTitle h1 {
+  padding: 2% 0;
+}
+.nameTitle h2 {
+  padding: 2% 0;
+  padding-left: 10px;
+}
+.mainContent {
+  display: flex;
+  justify-content: center;
+  justify-content: space-evenly;
+  align-items: center;
+  align-items: stretch;
+  margin-bottom: 10%;
+  margin-top: 5%;
+}
+.mainContent .sidebar {
+  border: 1px solid silver;
+  outline-style: double;
+  width: 25%;
+}
+.mainContent .sidebar .contactInfo,
+.mainContent .sidebar .skills {
+  padding: 3%;
+}
+.mainContent .sidebar .contactInfo h3,
+.mainContent .sidebar .skills h3 {
+  font-family: 'Oswald', sans-serif;
+  padding-bottom: 5px;
+  border-bottom: 1px solid silver;
+}
+.mainContent .sidebar .contactInfo ul,
+.mainContent .sidebar .skills ul {
+  font-family: 'Hepta Slab', serif;
+  padding: 10px 0;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  width: 95%;
+  margin-left: 20px;
+}
+.mainContent .sidebar .contactInfo ul li,
+.mainContent .sidebar .skills ul li {
+  list-style-position: outside;
+  list-style-type: circle;
+  padding: 1% 0;
+  line-height: 1.3rem;
+}
+.mainContent .sidebar .contactInfo ul li,
+.mainContent .sidebar .skills ul li {
+  padding: 5% 0;
+}
+.mainContent .middleSection {
+  border: 1px solid silver;
+  outline-style: double;
+  width: 60%;
+  height: 100%;
+  padding: 1%;
+}
+.mainContent .middleSection .profile,
+.mainContent .middleSection .employmentHistory,
+.mainContent .middleSection .education {
+  font-size: 1.2rem;
+}
+.mainContent .middleSection .profile h3,
+.mainContent .middleSection .employmentHistory h3,
+.mainContent .middleSection .education h3 {
+  font-family: 'Oswald', sans-serif;
+  padding-bottom: 5px;
+  border-bottom: 1px solid silver;
+}
+.mainContent .middleSection .profile ul,
+.mainContent .middleSection .employmentHistory ul,
+.mainContent .middleSection .education ul {
+  font-family: 'Hepta Slab', serif;
+  padding: 10px 0;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  width: 95%;
+  margin-left: 20px;
+}
+.mainContent .middleSection .profile ul li,
+.mainContent .middleSection .employmentHistory ul li,
+.mainContent .middleSection .education ul li {
+  list-style-position: outside;
+  list-style-type: circle;
+  padding: 1% 0;
+  line-height: 1.3rem;
+}
+.mainContent .middleSection .profile p,
+.mainContent .middleSection .employmentHistory p,
+.mainContent .middleSection .education p {
+  padding: 2% 1.8%;
+  padding-right: 10%;
+  font-family: 'Hepta Slab', serif;
+  line-height: 1.4rem;
+  font-size: 1rem;
+}
+.mainContent .middleSection .profile .empHistHead,
+.mainContent .middleSection .employmentHistory .empHistHead,
+.mainContent .middleSection .education .empHistHead {
+  display: flex;
+  justify-content: space-between;
+  padding: 1% 0;
+}
+.mainContent .middleSection .profile .empHistHead .empInfoTop,
+.mainContent .middleSection .employmentHistory .empHistHead .empInfoTop,
+.mainContent .middleSection .education .empHistHead .empInfoTop {
+  flex-direction: column;
+}
+.mainContent .middleSection .profile .empHistHead .empInfoBottom,
+.mainContent .middleSection .employmentHistory .empHistHead .empInfoBottom,
+.mainContent .middleSection .education .empHistHead .empInfoBottom {
+  color: silver;
+  font-size: 0.9rem;
+}
+.mainContent .middleSection .profile .empHistHead h4,
+.mainContent .middleSection .employmentHistory .empHistHead h4,
+.mainContent .middleSection .education .empHistHead h4 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 0.9rem;
+  padding: 1% 0;
+}
+.mainContent .middleSection .profile .empHistList ul,
+.mainContent .middleSection .employmentHistory .empHistList ul,
+.mainContent .middleSection .education .empHistList ul {
+  font-size: 1rem;
+}
+.mainContent .middleSection .profile .eduHead,
+.mainContent .middleSection .employmentHistory .eduHead,
+.mainContent .middleSection .education .eduHead {
+  display: flex;
+  justify-content: space-between;
+  padding: 1% 0;
+}
+.mainContent .middleSection .profile .eduHead .eduSection,
+.mainContent .middleSection .employmentHistory .eduHead .eduSection,
+.mainContent .middleSection .education .eduHead .eduSection {
+  flex-direction: column;
+}
+.mainContent .middleSection .profile .eduHead .eduSectionBottom,
+.mainContent .middleSection .employmentHistory .eduHead .eduSectionBottom,
+.mainContent .middleSection .education .eduHead .eduSectionBottom {
+  color: silver;
+  font-size: 0.9rem;
+}
+.mainContent .middleSection .profile .eduHead h4,
+.mainContent .middleSection .employmentHistory .eduHead h4,
+.mainContent .middleSection .education .eduHead h4 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 0.9rem;
+  padding: 1% 0;
+}
+@media (max-width: 500px) {
+  .nameTitle {
+    display: flex;
+    width: 100%;
+  }
+  .nameTitle h1 {
+    padding-left: 10px;
+  }
+  .nameTitle h2 {
+    padding-top: 10px;
+    padding-left: 10px;
+  }
+  header nav a {
+    margin: auto;
+  }
+  section.mainContent {
+    flex-direction: column;
+    width: 100%;
+  }
+  section.mainContent .sidebar {
+    width: 100%;
+  }
+  section.mainContent .middleSection {
+    width: 100%;
+  }
+}

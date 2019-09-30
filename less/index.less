@@ -24,31 +24,91 @@ time, mark, audio, video {
 	font: inherit;
 	vertical-align: baseline;
 }
+* {
+	max-width: 100%;
+}
+// *************** FONTS ***********************
+
+@import url('https://fonts.googleapis.com/css?family=Hepta+Slab|Oswald&display=swap');
+
+// *************** MIX INS **********************
+
+.flex() {
+	display: flex;
+	justify-content: center;
+	justify-content: space-evenly;
+	align-items: center;
+}
+
+.section() {
+
+h3 {
+
+	font-family: @header-font;
+	padding-bottom: 5px;
+	border-bottom: 1px solid silver;
+
+	}
+
+	ul {
+
+		font-family: @paragraph-font;
+		padding: 10px 0;
+		display: flex;
+		flex-wrap: wrap;
+		flex-direction: column;
+		width: 95%;
+		margin-left: 20px;
+
+		li {
+
+			list-style-position: outside;
+			list-style-type: circle;
+			padding: 1% 0;
+			line-height: 1.3rem;
+
+		}
+	}
+}
+
+// ****************** VARIABLES *******************************
+
+@header-font: 'Oswald', sans-serif;
+@paragraph-font:'Hepta Slab', serif;
+@side-color: silver;
+
 /* HTML5 display-role reset for older browsers */
+
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
+
 body {
 	line-height: 1;
 }
+
 ol, ul {
 	list-style: none;
 }
+
 blockquote, q {
 	quotes: none;
 }
+
 blockquote:before, blockquote:after,
 q:before, q:after {
 	content: '';
 	content: none;
 }
+
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
 
 /* Set every element's box-sizing to border-box */
+
 * {
     box-sizing: border-box;
 }
@@ -57,3 +117,196 @@ html, body {
     height: 100%;
 }
 
+nav {
+
+	.flex();
+	justify-content: flex-end;
+	margin-right: 5%;
+	margin-bottom: 3%;
+
+	a:link, a:visited {
+
+		padding: 1% 2%;
+		font-family: @paragraph-font; 
+		text-decoration: none;
+		color: silver;
+
+	} // CLOSING a:attributes
+
+	a:hover {
+		text-decoration: underline;
+	}
+
+} // CLOSING nav
+
+.nameTitle {
+
+	border: 1px solid silver;
+	outline-style: ridge;
+	.flex();
+	flex-direction: column;
+	width: 30%;
+	margin: auto;
+	margin-bottom: 3%;
+	padding-top: 3%;
+	padding-bottom: 3%;
+	font-family: @header-font; 
+	font-size: 1.5rem;
+
+	h1 {
+
+		padding: 2% 0;
+
+	} // CLOSING H1 and H2
+
+	h2 {
+		padding: 2% 0;
+		padding-left: 10px;
+	}
+
+} // CLOSING .nameTitle
+
+.mainContent {
+
+	.flex();
+	align-items: stretch;
+	margin-bottom: 10%;
+	margin-top: 5%;
+
+	.sidebar {
+
+		border: 1px solid silver;
+		outline-style: double;
+		width: 25%;
+
+		.contactInfo, .skills {
+
+			.section();
+			padding: 3%;
+
+			ul li {
+
+				padding: 5% 0;
+
+			} // CLOSING UL LI TAG
+
+		} // CLOSING .contactInfo and .skills
+
+	} // CLOSING .sidebar
+
+	.middleSection {
+
+		border: 1px solid silver;
+		outline-style: double;
+		width: 60%;
+		height: 100%;
+		padding: 1%;
+
+		.profile, .employmentHistory, .education {
+
+			.section();
+			font-size: 1.2rem;
+
+			p {
+
+				padding: 2% 1.8%;
+				padding-right: 10%;
+				font-family: @paragraph-font;
+				line-height: 1.4rem;
+				font-size: 1rem;
+
+			} // CLOSING p tag
+
+			.empHistHead {
+
+				display: flex;
+				justify-content: space-between;
+				padding: 1% 0;
+				
+				.empInfoTop {
+
+					flex-direction: column;
+
+				} // CLOSING .empInfoTop class
+
+				.empInfoBottom {
+					color: silver;
+					font-size: .9rem;
+				} // CLOSING .empInfoBottom class
+
+				h4 {
+					font-family: @header-font;
+					font-size: .9rem;
+					padding: 1% 0;
+
+				} // CLOSING h4 tag
+
+			} // CLOSING .empHistHead class
+
+			.empHistList ul {
+				font-size: 1rem;
+			}
+			.eduHead {
+
+				display: flex;
+				justify-content: space-between;
+				padding: 1% 0;
+
+				.eduSection {
+					flex-direction: column;
+				} // CLOSING .eduSection
+
+				.eduSectionBottom {
+					color: silver;
+					font-size: .9rem;
+
+				} // CLOSING .eduSection Bottom
+
+				h4 {
+
+					font-family: @header-font;
+					font-size: .9rem;
+					padding: 1% 0;
+	
+				} // CLOSING h4 tag
+
+			} // CLOSING .eduHead
+
+		} // CLOSING .profile, .employmentHistory, .education classes
+
+	} // CLOSING middleSection class
+
+} // CLOSING .mainContent class
+
+@media (max-width: 500px) {
+
+	.nameTitle {
+		display: flex;
+		width: 100%;
+		h1 {
+			padding-left: 10px;
+		}
+		h2 {
+			padding-top: 10px;
+			padding-left: 10px;
+		}	
+	}
+	header nav a {
+
+		margin: auto;
+
+	} // CLOSING header nav a tag
+
+	section.mainContent {
+
+		flex-direction: column;
+		width:100%;
+		.sidebar {
+			width: 100%;
+		}
+		.middleSection {
+			width: 100%;
+		}
+	}
+
+}
